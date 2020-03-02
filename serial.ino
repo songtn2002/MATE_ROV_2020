@@ -16,7 +16,7 @@ String readSerStr(){
 
 unsigned long last_read = 0;
 int last_len = 0;
-boolean checkSerial(){
+boolean checkSerial(){//check whether there is data in the serial port
   unsigned long this_read = micros();
   int this_len = Serial.available();
   unsigned long gap = this_read-last_read;
@@ -42,7 +42,7 @@ boolean checkSerial(){
 
 void sendStatus(){  
   StaticJsonDocument<400> doc;
-  doc["row"] = 5.38;
+  doc["roll"] = 5.38;
   doc["yaw"] = 4.38;
   doc["pitch"] = 2.38;
   doc["motor1"] = 34;

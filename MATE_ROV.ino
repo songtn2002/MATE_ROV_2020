@@ -2,7 +2,7 @@
 
 char* command;
 int arg0;
-double arg1;
+int arg1;
 double arg2;
 
 DeserializationError err;
@@ -47,7 +47,7 @@ void loop() {
       //if there is no error, reply to the computer that the command is received
     }
   }
-  if (timed(66)) { // for every 66 milliseconds do this
+  if (timed(80)) { // for every 80 milliseconds do this
     if (output != "") {
       Serial.print(output);
       //if there is a response to a command or an error, send it
